@@ -1,5 +1,8 @@
+#pip install pyttsx3; pyp install speech_recognition
 import pyttsx3
 import speech_recognition as sr
+
+# Definování poslechu a mluvení (naší AI voice)
 
 class AI():
     def __init__(self):
@@ -10,11 +13,11 @@ class AI():
         self.engine.setProperty('rate', voicespeed)
         self.r = sr.Recognizer()
         self.m = sr.Microphone()
-
+#Definování funkce speak:
     def speak(self, sentence):
         self.engine.say(sentence)
         self.engine.runAndWait()
-
+#Definování poslouchání, + opakování Repeater
     def listen(self):
         print("Poslouchám")
         with self.m as source:

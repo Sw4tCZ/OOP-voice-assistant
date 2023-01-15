@@ -4,14 +4,16 @@ from Features.Play_song import play_songs
 from Features.Dtime import date, day, time
 from Features.Default import ip, netspeed
 
-alf = AI()
+#Vymezení AI
 
-# alf.name = "Robbie the Robot"
+bot = AI()
+
+#Příkazy:
 
 wishme()
 query = ""
 while True:
-    query = alf.listen()
+    query = bot.listen()
     if "čas" in query:  # Čas
         time()
     elif "datum" in query:
@@ -26,5 +28,3 @@ while True:
         netspeed()
     elif "konec" in query:
         quit()
-
-    # do commands
